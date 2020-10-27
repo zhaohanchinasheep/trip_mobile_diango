@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="." method="post">
+    {% csrf_token %}
+    <div>
+        {{ form.username.label }}
+        {{ form.username }}
+        {{ form.username.errors.as_text }}
+
+    </div>
+
+    <div>
+        {{ form.password.label }}
+        {{ form.password }}
+        {{ form.password.errors.as_text }}
+    </div>
+    <div>
+        {{ form.non_field_errors.as_text }}
+    </div>
+    <input type="submit" value="登陆">
+
+
+</form>
+
+</body>
+</html>
